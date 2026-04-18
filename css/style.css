@@ -386,7 +386,7 @@ section {
     url('../assets/media/black-seda.png');
   background-size: cover;
   background-position: center;
-  background-attachment: local;
+  background-attachment: fixed;
 }
 
 .about-inner {
@@ -543,7 +543,7 @@ section {
     url('../assets/media/purple-background.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: local;
+  background-attachment: fixed;
 }
 
 .founder-inner {
@@ -726,6 +726,7 @@ section {
   position: absolute;
   inset: 0;
   background: url('../assets/footer-bg.png') center bottom / cover no-repeat;
+  background-attachment: fixed;
   opacity: 0.18;
   pointer-events: none;
   mix-blend-mode: screen;
@@ -1151,12 +1152,20 @@ section {
   }
 }
 
-/* Disable parallax image overflow on mobile —
-   reset transforms applied by JS */
+/* Disable parallax on mobile — fixed attachment causes rendering issues */
 @media (max-width: 768px) {
   .gallery-banner img {
     top: 0;
     height: 100%;
     transform: none !important;
+  }
+
+  .about,
+  .founder {
+    background-attachment: scroll;
+  }
+
+  .footer::before {
+    background-attachment: scroll;
   }
 }
