@@ -440,11 +440,16 @@ section {
 
   .about-image-wrap img {
     height: 380px;
-    transform: none !important;
   }
 
   .about-image-wrap::before {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image-wrap img {
+    transform: none !important;
   }
 }
 
@@ -602,11 +607,16 @@ section {
 
   .founder-image-wrap img {
     height: 420px;
-    transform: none !important;
   }
 
   .founder-image-wrap::after {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-image-wrap img {
+    transform: none !important;
   }
 }
 

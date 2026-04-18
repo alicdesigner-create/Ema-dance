@@ -75,15 +75,15 @@ function initParallax() {
   const items = [
     {
       el: document.querySelector('.about-image-wrap img'),
-      factor: 0.10   // drifts at 10% of scroll delta — very subtle
+      factor: 0.20
     },
     {
       el: document.querySelector('.founder-image-wrap img'),
-      factor: 0.10
+      factor: 0.20
     },
     {
       el: document.querySelector('.gallery-banner img'),
-      factor: 0.06   // even lighter — already a full-bleed image
+      factor: 0.12
     }
   ].filter(item => item.el !== null);
 
