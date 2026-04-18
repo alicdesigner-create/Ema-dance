@@ -380,7 +380,13 @@ section {
    ============================ */
 
 .about {
-  background: var(--bg-secondary);
+  background-color: var(--bg-secondary);
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.78)),
+    url('../assets/media/black-seda.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
 }
 
 .about-inner {
