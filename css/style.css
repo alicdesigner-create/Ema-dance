@@ -772,6 +772,17 @@ section {
   font-size: 12px;
   color: rgba(255,255,255,0.3);
   letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.footer-teso {
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-teso:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
