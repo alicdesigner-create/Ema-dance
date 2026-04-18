@@ -713,10 +713,22 @@ section {
    ============================ */
 
 .footer {
+  position: relative;
   background: var(--bg-primary);
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 70px 60px 40px;
   text-align: center;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/footer-bg.png') center bottom / cover no-repeat;
+  opacity: 0.18;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .footer-logo {
