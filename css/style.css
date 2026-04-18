@@ -380,16 +380,33 @@ section {
    ============================ */
 
 .about {
+  position: relative;
+  overflow: hidden;
   background-color: var(--bg-secondary);
-  background-image:
-    linear-gradient(rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.78)),
-    url('../assets/media/black-seda.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  inset: -8% -6%;
+  background: url('../assets/media/black-seda.png') center / cover no-repeat;
+  transform: translate(var(--about-x, 0px), var(--about-y, 0px));
+  will-change: transform;
+  z-index: 0;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.78);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .about-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -537,16 +554,33 @@ section {
    ============================ */
 
 .founder {
+  position: relative;
+  overflow: hidden;
   background-color: var(--bg-secondary);
-  background-image:
-    linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.72)),
-    url('../assets/media/purple-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+}
+
+.founder::before {
+  content: '';
+  position: absolute;
+  inset: -8% -6%;
+  background: url('../assets/media/purple-background.jpg') center / cover no-repeat;
+  transform: translate(var(--founder-x, 0px), var(--founder-y, 0px));
+  will-change: transform;
+  z-index: 0;
+}
+
+.founder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.72);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .founder-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -724,12 +758,13 @@ section {
 .footer::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 0 -5%;
   background: url('../assets/footer-bg.png') center bottom / cover no-repeat;
-  background-attachment: fixed;
   opacity: 0.18;
   pointer-events: none;
   mix-blend-mode: screen;
+  transform: translateX(var(--footer-bg-x, 0px));
+  will-change: transform;
 }
 
 .footer-logo {
@@ -1152,7 +1187,7 @@ section {
   }
 }
 
-/* Disable parallax on mobile — fixed attachment causes rendering issues */
+/* Disable parallax transforms on mobile */
 @media (max-width: 768px) {
   .gallery-banner img {
     top: 0;
@@ -1160,12 +1195,10 @@ section {
     transform: none !important;
   }
 
-  .about,
-  .founder {
-    background-attachment: scroll;
-  }
-
+  .about::before,
+  .founder::before,
   .footer::before {
-    background-attachment: scroll;
+    transform: none !important;
+    inset: 0;
   }
 }
