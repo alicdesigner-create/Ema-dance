@@ -59,3 +59,77 @@ if (fadeEls.length > 0) {
 
   fadeEls.forEach(el => observer.observe(el));
 }
+
+// ============================
+// SUBTLE PARALLAX
+// ============================
+
+function initParallax() {
+  // Respect accessibility preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Skip on mobile — parallax is a desktop/tablet delight
+  const isMobile = () => window.innerWidth <= 768;
+  if (isMobile()) return;
+
+  const items = [
+    {
+      el: document.querySelector('.about-image-wrap img'),
+      factor: 0.10   // drifts at 10% of scroll delta — very subtle
+    },
+    {
+      el: document.querySelector('.founder-image-wrap img'),
+      factor: 0.10
+    },
+    {
+      el: document.querySelector('.gallery-banner img'),
+      factor: 0.06   // even lighter — already a full-bleed image
+    }
+  ].filter(item => item.el !== null);
+
+  if (!items.length) return;
+
+  let ticking = false;
+
+  function applyParallax() {
+    if (isMobile()) {
+      // If user resized down to mobile, clear any transforms
+      items.forEach(({ el }) => { el.style.transform = ''; });
+      ticking = false;
+      return;
+    }
+
+    items.forEach(({ el, factor }) => {
+      const parent = el.parentElement;
+      const rect = parent.getBoundingClientRect();
+
+      // How far the center of the section is from the center of the viewport
+      const centerOffset = (rect.top + rect.height / 2) - window.innerHeight / 2;
+      const shift = centerOffset * factor;
+
+      el.style.transform = `translateY(${shift}px)`;
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(applyParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Also run on resize in case viewport changes
+  window.addEventListener('resize', () => {
+    if (!ticking) {
+      requestAnimationFrame(applyParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial render
+  applyParallax();
+}
+
+initParallax();
