@@ -537,7 +537,13 @@ section {
    ============================ */
 
 .founder {
-  background: var(--bg-secondary);
+  background-color: var(--bg-secondary);
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.72)),
+    url('../assets/media/purple-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
 }
 
 .founder-inner {
