@@ -53,12 +53,29 @@
   <!-- ========================
        INFO SECTION
   ========================= -->
+  <style>
+    .info-tagline { font-size: 56px; }
+    .info-col-title { font-size: 28px; }
+    .info-col-body { font-size: 17px; }
+    .info-row3-title { font-size: 28px; }
+    .info-row3-body { font-size: 17px; }
+    .info-closing-large { font-size: 52px; }
+    @media (max-width: 640px) {
+      .info-tagline { font-size: 36px; }
+      .info-col-title { font-size: 22px; }
+      .info-col-body { font-size: 15px; }
+      .info-row3-title { font-size: 22px; }
+      .info-row3-body { font-size: 15px; }
+      .info-closing-large { font-size: 32px; }
+    }
+  </style>
+
   <section style="background:#1a1a1a; padding:80px 40px;">
     <div style="max-width:1100px; margin:0 auto;">
 
       <!-- Row 1: Tagline -->
       <div style="text-align:center; margin-bottom:60px;">
-        <h2 style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; font-size:48px; margin:0 0 12px;">Move. Shine. Own Your Confidence.</h2>
+        <h2 class="info-tagline" style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; margin:0 0 12px;">Move. Shine. Own Your Confidence.</h2>
         <div style="width:80px; height:2px; background:#9b5fc0; margin:0 auto;"></div>
       </div>
 
@@ -66,23 +83,37 @@
       <div style="display:flex; gap:32px; margin-bottom:60px; flex-wrap:wrap;">
 
         <div style="flex:1; min-width:220px; text-align:center;">
-          <div style="font-size:36px; margin-bottom:12px;">👠</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; color:#fff; font-size:22px; margin:0 0 10px;">HIGH HEELS</h3>
-          <p style="font-family:'Montserrat',sans-serif; color:#ccc; font-size:14px; margin:0 0 14px;">Mon &amp; Tue · 7PM Beginner | 8PM Intermediate</p>
+          <div style="margin-bottom:16px; display:flex; justify-content:center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="#9b5fc0">
+              <path d="M10,80 C10,80 15,65 30,60 C45,55 60,58 70,52 C80,46 85,35 88,25 L92,26 C89,37 84,50 72,57 C60,64 45,61 32,66 C20,71 16,82 16,82 Z M88,25 C88,25 90,20 88,18 C86,16 82,18 82,18 L85,26 Z"/>
+            </svg>
+          </div>
+          <h3 class="info-col-title" style="font-family:'Bebas Neue',sans-serif; color:#fff; margin:0 0 10px;">HIGH HEELS</h3>
+          <p class="info-col-body" style="font-family:'Montserrat',sans-serif; font-weight:400; color:#ccc; margin:0 0 14px;">Mon &amp; Tue · 7PM Beginner | 8PM Intermediate</p>
           <div style="width:40px; height:2px; background:#9b5fc0; margin:0 auto;"></div>
         </div>
 
         <div style="flex:1; min-width:220px; text-align:center;">
-          <div style="font-size:36px; margin-bottom:12px;">🔥</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; color:#fff; font-size:22px; margin:0 0 10px;">TWERK &amp; DANCEHALL</h3>
-          <p style="font-family:'Montserrat',sans-serif; color:#ccc; font-size:14px; margin:0 0 14px;">Wednesday · 7PM · Beginner-friendly, rhythm, full-body movement</p>
+          <div style="margin-bottom:16px; display:flex; justify-content:center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="#9b5fc0">
+              <circle cx="50" cy="15" r="8"/>
+              <path d="M50,23 C50,23 35,35 32,50 C29,65 38,72 42,85 L48,85 C44,72 37,66 40,52 C43,38 50,30 50,30 C50,30 57,38 60,52 C63,66 56,72 52,85 L58,85 C62,72 71,65 68,50 C65,35 50,23 50,23 Z M32,50 C32,50 20,48 18,55 L25,57 C26,53 32,52 32,52 Z M68,50 C68,50 80,48 82,55 L75,57 C74,53 68,52 68,52 Z"/>
+            </svg>
+          </div>
+          <h3 class="info-col-title" style="font-family:'Bebas Neue',sans-serif; color:#fff; margin:0 0 10px;">TWERK &amp; DANCEHALL</h3>
+          <p class="info-col-body" style="font-family:'Montserrat',sans-serif; font-weight:400; color:#ccc; margin:0 0 14px;">Wednesday · 7PM · Beginner-friendly, rhythm, full-body movement</p>
           <div style="width:40px; height:2px; background:#9b5fc0; margin:0 auto;"></div>
         </div>
 
         <div style="flex:1; min-width:220px; text-align:center;">
-          <div style="font-size:36px; margin-bottom:12px;">🤸</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; color:#fff; font-size:22px; margin:0 0 10px;">STRETCH &amp; FLEXIBILITY</h3>
-          <p style="font-family:'Montserrat',sans-serif; color:#ccc; font-size:14px; margin:0 0 14px;">Wednesday · 8PM · Flexibility, recovery, and body strength</p>
+          <div style="margin-bottom:16px; display:flex; justify-content:center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="#9b5fc0">
+              <circle cx="50" cy="12" r="8"/>
+              <path d="M50,20 C50,20 38,28 30,40 C22,52 25,58 20,70 L27,72 C31,62 29,56 36,46 C40,40 46,34 50,30 C54,34 60,40 64,46 C71,56 69,62 73,72 L80,70 C75,58 78,52 70,40 C62,28 50,20 50,20 Z M36,46 C36,46 25,50 20,58 L27,61 C30,55 38,52 38,52 Z"/>
+            </svg>
+          </div>
+          <h3 class="info-col-title" style="font-family:'Bebas Neue',sans-serif; color:#fff; margin:0 0 10px;">STRETCH &amp; FLEXIBILITY</h3>
+          <p class="info-col-body" style="font-family:'Montserrat',sans-serif; font-weight:400; color:#ccc; margin:0 0 14px;">Wednesday · 8PM · Flexibility, recovery, and body strength</p>
           <div style="width:40px; height:2px; background:#9b5fc0; margin:0 auto;"></div>
         </div>
 
@@ -92,20 +123,20 @@
       <div style="display:flex; gap:48px; margin-bottom:60px; flex-wrap:wrap;">
 
         <div style="flex:1; min-width:240px;">
-          <h4 style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; font-size:24px; margin:0 0 14px;">WHO IT'S FOR</h4>
-          <p style="font-family:'Montserrat',sans-serif; color:#fff; font-size:15px; line-height:1.7; margin:0;">Beginners welcome — no experience required. Start from the basics and progress at your pace. Anyone ready to move, build confidence, and feel empowered.</p>
+          <h4 class="info-row3-title" style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; margin:0 0 14px;">WHO IT'S FOR</h4>
+          <p class="info-row3-body" style="font-family:'Montserrat',sans-serif; font-weight:400; color:#fff; line-height:1.7; margin:0;">Beginners welcome — no experience required. Start from the basics and progress at your pace. Anyone ready to move, build confidence, and feel empowered.</p>
         </div>
 
         <div style="flex:1; min-width:240px;">
-          <h4 style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; font-size:24px; margin:0 0 14px;">BOOKING OPTIONS</h4>
-          <p style="font-family:'Montserrat',sans-serif; color:#fff; font-size:15px; line-height:1.7; margin:0;">Drop-in to try a class or grab a package to grow your skills faster.</p>
+          <h4 class="info-row3-title" style="font-family:'Bebas Neue',sans-serif; color:#9b5fc0; margin:0 0 14px;">BOOKING OPTIONS</h4>
+          <p class="info-row3-body" style="font-family:'Montserrat',sans-serif; font-weight:400; color:#fff; line-height:1.7; margin:0;">Drop-in to try a class or grab a package to grow your skills faster.</p>
         </div>
 
       </div>
 
       <!-- Row 4: Closing statement -->
       <div style="background:linear-gradient(to bottom, #1a1a1a, #0a0a0a); text-align:center; padding:48px 20px; margin:0 -40px -80px;">
-        <p style="font-family:'Bebas Neue',sans-serif; color:#fff; font-size:36px; margin:0 0 10px;">Step into your power, feel your body move, and have fun.</p>
+        <p class="info-closing-large" style="font-family:'Bebas Neue',sans-serif; color:#fff; margin:0 0 10px;">Step into your power, feel your body move, and have fun.</p>
         <p style="font-family:'Bebas Neue',sans-serif; color:#fff; font-size:20px; letter-spacing:2px; margin:0 0 16px;">JOIN AMA DANCE CLUB · GROW &amp; GLOW WITH US</p>
         <p style="font-family:'Montserrat',sans-serif; color:#9b5fc0; font-size:14px; font-style:italic; margin:0;">Confidence isn't something you wait for — it's something you practice.</p>
       </div>
