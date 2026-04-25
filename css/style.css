@@ -1232,6 +1232,28 @@ section {
   object-fit: contain;
 }
 
+/* Responsive logo */
+.logo-desktop {
+  display: block;
+  height: 45px;
+  width: auto;
+}
+
+.logo-mobile {
+  display: none;
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+  }
+}
+
 .class-icon:hover {
   filter: drop-shadow(0 0 20px rgba(155, 95, 192, 1))
           drop-shadow(0 0 40px rgba(155, 95, 192, 0.8))
